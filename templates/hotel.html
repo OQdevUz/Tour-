@@ -115,7 +115,7 @@
 
                   {% for i in cats %}
                   <div class="form-check">
-                    <input type="checkbox" onClick="location.reload();" name='cats' {% if i.title in hotel_cats_ %} checked='true' {% endif %}
+                    <input type="checkbox"  name='cats' {% if i.title in hotel_cats_ %} checked='true' {% endif %}
                       class="form-check-input" value={{i.title}} id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">
                       <h4 class="place">{{i.title}}</h4>
@@ -154,17 +154,5 @@
     </div>
   </div>
 </div>
-<script>
-   var checker = document.getElementById('cats');
- var sendbtn = document.getElementById('sendNewSms');
- // when unchecked or checked, run the function
- checker.onchange = function(){
-if(this.checked){
-    sendbtn.disabled = false;
-} else {
-    sendbtn.disabled = true;
-}
 
-}
-</script>
 {% endblock content %}
